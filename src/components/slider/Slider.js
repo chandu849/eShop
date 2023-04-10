@@ -32,6 +32,14 @@ const Slider = () => {
         }
         return () => clearInterval(slideInterval)
     }, [currentSlide])
+    
+    const shopNow = () => {
+        window.scrollTo({
+            top: 550,
+            behavior: "smooth",
+          });
+    }
+    
   return (
     <div className='slider'>
         <AiOutlineArrowLeft className='arrow prev' onClick={prevSlide}/>
@@ -47,9 +55,9 @@ const Slider = () => {
                             <h2>{heading}</h2>
                             <p>{desc}</p>
                             <hr />
-                            <a href="#product" className='--btn --btn-primary'>
+                            <button onClick={shopNow} className='--btn --btn-primary'>
                                 Shop now
-                            </a>
+                            </button>
                         </div>
                         </>
                     )}

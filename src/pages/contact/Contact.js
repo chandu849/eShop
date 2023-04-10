@@ -72,19 +72,19 @@ const Contact = () => {
               <div className={styles.icons}>
                 <span>
                   <FaPhoneAlt />
-                  <p>+234 705 141 6545</p>
+                  <p>+91 9989872073</p>
                 </span>
                 <span>
                   <FaEnvelope />
-                  <p>Support@eshop.com</p>
+                  <p>Support@rrnovelties.com</p>
                 </span>
                 <span>
                   <GoLocation />
-                  <p>Abuja, Nigeria</p>
+                  <p>Anathapur, AP</p>
                 </span>
                 <span>
                   <FaTwitter />
-                  <p>@ZinoTrust</p>
+                  <p>@RRNovelties</p>
                 </span>
               </div>
             </Card>
