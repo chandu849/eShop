@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json())
 
 app.get('/', (req, res) => {
-    res.send("Welcome to our eShop website")
+    res.send("Welcome to our RRNovelties website")
 })
 
 const array = [];

@@ -9,14 +9,14 @@ import { toast } from 'react-toastify';
 import { useDispatch, useSelector } from 'react-redux'
 import { REMOVE_ACTIVE_USER, SET_ACTIVE_USER } from '../../redux/slice/authSlice'
 import ShowOnLogin, { ShowOnLogout } from '../hiddenLink/hiddenLink'
-import AdminOnlyRoute, { AdminOnlyLink } from '../adminOnlyRoute/AdminOnlyRoute'
+import { AdminOnlyLink } from '../adminOnlyRoute/AdminOnlyRoute'
 import { CALCULATE_TOTAL_QUANTITY, selectCartTotalQuantity } from '../../redux/slice/cartSlice'
 
 
 const logo = (
   <div className={styles.logo}>
         <Link to="/">
-          <h2>e<span>Shop</span>.</h2>
+          <h2>RR<span>Novelties</span></h2>
         </Link>
       </div>
 )
@@ -60,7 +60,7 @@ function Header() {
       dispatch(SET_ACTIVE_USER({
         email : user.email,
         userName: user.displayName ? user.displayName : displayName,
-        userId: user.uid
+        userID: user.uid
       }))
     } else {
       setDisplayName("")
@@ -112,11 +112,11 @@ const cart = (
               <FaTimes size={22} color="#fff" onClick={hideMenu}/>
             </li>
             <AdminOnlyLink>
-              <Link to="/admin/home">
             <li>
-              <button className='--btn --btn-primary'>Admin</button>
+              <NavLink to="/admin/home" className={activeLink}>
+                <b>Admin</b>
+              </NavLink>
             </li>
-            </Link>
             </AdminOnlyLink>
             <li>
               <NavLink to="/" className={activeLink}>
